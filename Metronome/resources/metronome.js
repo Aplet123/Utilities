@@ -14,6 +14,8 @@ beat.addEventListener("mousemove",function(){beatCount.innerHTML=beat.value + " 
 back.addEventListener("click",function(){beatCount.innerHTML=beat.value + " bpm";});
 next.addEventListener("click",function(){beatCount.innerHTML=beat.value + " bpm";});
 beat.addEventListener("change",function(){if(start===true){window.clearInterval(window.interval);}});
+back.addEventListener("click",function(){if(start===true){window.clearInterval(window.interval);}});
+next.addEventListener("click",function(){if(start===true){window.clearInterval(window.interval);}});
 time.addEventListener("keypress",function(){if((isNaN(Number(time.value))||Number(time.value)<=0)&&time.value!==""){time.value=1;}if(Number(time.value)%1!==0){time.value=Math.ceil(Number(time.value));}});
 var play = function(src,start,end)
 {
